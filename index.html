@@ -269,6 +269,22 @@ footer{background:#0d2111;color:rgba(255,255,255,.6);font-size:13px;padding:30px
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .disclaimer{max-width:760px}
 
+/* ƯU ĐÃI MỚI */
+.promo-top{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
+@media(max-width:980px){.promo-top{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.promo-top{grid-template-columns:1fr}}
+.pr{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:20px;position:relative;overflow:hidden}
+.pr.new{border-color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold)}
+.pr.new::after{content:"MỚI";position:absolute;top:12px;right:12px;background:#c0392b;color:#fff;font-size:10.5px;font-weight:800;padding:3px 8px;border-radius:999px;letter-spacing:.08em}
+.pr .v{font-family:'Playfair Display',serif;font-size:28px;color:#b8322a;line-height:1.1}
+.pr h4{color:var(--forest);font-size:15px;margin:6px 0 4px}
+.pr p{font-size:13.5px;color:var(--muted)}
+.banners{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}
+@media(max-width:900px){.banners{grid-template-columns:repeat(2,1fr)}}
+.banners a{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line);cursor:zoom-in;aspect-ratio:3/2}
+.banners img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.banners a:hover img{transform:scale(1.05)}
+.banners a.big{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
 /* ATA HOUSE */
 .ah-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-top:36px}
 @media(max-width:900px){.ah-grid{grid-template-columns:1fr}}
@@ -338,6 +354,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <a class="brand" href="#top"><span class="logo">✦</span><span>PHƯỚC ĐÔNG<br><b>NEW CITY</b></span></a>
     <button class="burger" aria-label="Mở menu" onclick="document.querySelector('.menu').classList.toggle('open')">☰</button>
     <ul class="menu" onclick="if(event.target.tagName==='A')this.classList.remove('open')">
+      <li><a href="#uu-dai" style="color:var(--gold-2);font-weight:700">Ưu đãi mới</a></li>
       <li><a href="#tong-quan">Tổng quan</a></li>
       <li><a href="#vi-tri">Vị trí</a></li>
       <li><a href="#san-pham">Sản phẩm</a></li>
@@ -372,6 +389,38 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     </div>
   </div>
 </header>
+
+<!-- ƯU ĐÃI MỚI NHẤT -->
+<section id="uu-dai" style="padding-top:64px;padding-bottom:64px">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Cập nhật 10/2026</span>
+      <h2 class="title">Chính sách ưu đãi khách hàng mới nhất</h2>
+      <p class="lead">Cộng dồn nhiều ưu đãi – trừ trực tiếp vào hợp đồng mua bán, kèm quà tặng vận hành để căn nhà sẵn sàng cho thuê ngay khi nhận bàn giao.</p>
+    </div>
+    <div class="promo-top">
+      <div class="pr new reveal"><div class="v">4.608.000đ</div><h4>Tặng phí quản lý 24 tháng đầu</h4><p>Kể từ ngày bàn giao nhà, trừ trực tiếp vào HĐMB.</p></div>
+      <div class="pr new reveal"><div class="v">~4 triệu</div><h4>Tặng gói vận hành</h4><p>Khóa vân tay thông minh, camera an ninh ngoài cửa, vệ sinh tổng thể lần đầu, chụp ảnh/quay video giới thiệu căn cho thuê, in ấn hợp đồng thuê.</p></div>
+      <div class="pr reveal"><div class="v">30 triệu</div><h4>“Booking 0 đồng”</h4><p>Chiết khấu 30.000.000đ trừ vào HĐMB.</p></div>
+      <div class="pr reveal"><div class="v">1%</div><h4>“Khách hàng thân thiết”</h4><p>Dành cho khách đã sở hữu nhà giai đoạn 1.</p></div>
+      <div class="pr reveal"><div class="v">0,5%</div><h4>“Cho bạn – cho tôi”</h4><p>Người mua được chiết khấu 0,5%, khách hàng giới thiệu nhận 0,5%.</p></div>
+      <div class="pr reveal"><div class="v">1%</div><h4>“An cư quê nhà”</h4><p>Dành cho người Tây Ninh (hộ khẩu, tạm trú hoặc làm việc tại Tây Ninh).</p></div>
+      <div class="pr reveal"><div class="v">1% – 3%</div><h4>Chiết khấu mua sỉ</h4><p>2–3 căn: 1%/sp · 4–5 căn: 2%/sp · từ 6 căn: 3%/sp.</p></div>
+      <div class="pr reveal" style="background:var(--forest);border-color:var(--forest)"><div class="v" style="color:var(--gold-2)">70%</div><h4 style="color:#fff">Hỗ trợ vay ngân hàng</h4><p style="color:rgba(255,255,255,.75)">Hỗ trợ lãi suất 0%, ân hạn nợ gốc 24 tháng.</p></div>
+    </div>
+    <div class="banners reveal" id="banners">
+      <a href="images/uu-dai-tang-phi-quan-ly.jpg" data-cap="Tặng phí quản lý 24 tháng đầu – trị giá 4.608.000đ"><img src="images/uu-dai-tang-phi-quan-ly.jpg" alt="Tặng phí quản lý 24 tháng đầu – trị giá 4.608.000đ" loading="eager"></a>
+      <a href="images/uu-dai-tang-goi-van-hanh.jpg" data-cap="Tặng gói vận hành cho thuê – trị giá ~4 triệu đồng"><img src="images/uu-dai-tang-goi-van-hanh.jpg" alt="Tặng gói vận hành cho thuê – trị giá ~4 triệu đồng" loading="eager"></a>
+      <a href="images/uu-dai-booking-0-dong.jpg" data-cap="Ưu đãi “Booking 0 đồng” – chiết khấu 30 triệu"><img src="images/uu-dai-booking-0-dong.jpg" alt="Ưu đãi “Booking 0 đồng” – chiết khấu 30 triệu" loading="eager"></a>
+      <a href="images/uu-dai-khach-hang-than-thiet.jpg" data-cap="Ưu đãi “Khách hàng thân thiết” – chiết khấu 1%"><img src="images/uu-dai-khach-hang-than-thiet.jpg" alt="Ưu đãi “Khách hàng thân thiết” – chiết khấu 1%" loading="lazy"></a>
+      <a href="images/uu-dai-cho-ban-cho-toi.jpg" data-cap="Ưu đãi “Cho bạn – cho tôi” – chiết khấu 0,5%"><img src="images/uu-dai-cho-ban-cho-toi.jpg" alt="Ưu đãi “Cho bạn – cho tôi” – chiết khấu 0,5%" loading="lazy"></a>
+      <a href="images/uu-dai-an-cu-que-nha.jpg" data-cap="Ưu đãi “An cư quê nhà” – chiết khấu 1%"><img src="images/uu-dai-an-cu-que-nha.jpg" alt="Ưu đãi “An cư quê nhà” – chiết khấu 1%" loading="lazy"></a>
+      <a href="images/uu-dai-chiet-khau-mua-si.jpg" data-cap="Chiết khấu mua sỉ 1% – 2% – 3%/sản phẩm"><img src="images/uu-dai-chiet-khau-mua-si.jpg" alt="Chiết khấu mua sỉ 1% – 2% – 3%/sản phẩm" loading="lazy"></a>
+      <a href="images/uu-dai-tong-hop-uu-dai.jpg" data-cap="Tổng hợp 4 ưu đãi chiết khấu"><img src="images/uu-dai-tong-hop-uu-dai.jpg" alt="Tổng hợp 4 ưu đãi chiết khấu" loading="lazy"></a>
+    </div>
+    <div class="btns" style="justify-content:center"><a class="btn btn-gold" href="#dang-ky" style="color:var(--forest)">Nhận bảng giá sau ưu đãi</a><a class="btn" href="#thanh-toan" style="border-color:var(--forest);color:var(--forest)">Tính lịch thanh toán</a></div>
+  </div>
+</section>
 
 <!-- TỔNG QUAN -->
 <section id="tong-quan">
@@ -668,10 +717,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <p class="lead">Giá bán tham khảo: căn 1 trệt 1 lửng từ ~1,4 tỷ, căn 1 trệt 1 lầu từ ~1,8 tỷ (chưa VAT). Các ưu đãi dưới đây được trừ trực tiếp vào hợp đồng mua bán (HĐMB).</p>
     </div>
     <div class="offers">
+      <div class="offer reveal" style="border-color:var(--gold)"><div class="pct">4.608.000đ</div><h4>Tặng phí quản lý 24 tháng đầu</h4><p>Kể từ ngày bàn giao nhà, trừ trực tiếp vào HĐMB.</p></div>
+      <div class="offer reveal" style="border-color:var(--gold)"><div class="pct">~4 triệu</div><h4>Tặng gói vận hành cho thuê</h4><p>Khóa vân tay, camera an ninh, vệ sinh lần đầu, chụp ảnh/quay video giới thiệu căn, in hợp đồng thuê.</p></div>
       <div class="offer reveal"><div class="pct">−30 tr</div><h4>Ưu đãi "Booking 0 đồng"</h4><p>Trừ trực tiếp 30.000.000đ vào giá trị HĐMB.</p></div>
       <div class="offer reveal"><div class="pct">−1%</div><h4>Ưu đãi "An cư quê nhà"</h4><p>Người đứng tên có hộ khẩu, tạm trú hoặc đang làm việc tại Tây Ninh.</p></div>
       <div class="offer reveal"><div class="pct">−1%</div><h4>Ưu đãi "Khách hàng thân thiết"</h4><p>Khách đã sở hữu nhà tại giai đoạn 1 và tiếp tục mua.</p></div>
-      <div class="offer reveal"><div class="pct">0,5% + 0,5%</div><h4>Ưu đãi "Cho bạn – cho tôi"</h4><p>Chủ nhà GĐ1 giới thiệu người mua: người mua được trừ 0,5% vào HĐMB, người giới thiệu nhận 0,5%.</p></div>
+      <div class="offer reveal"><div class="pct">0,5% + 0,5%</div><h4>Ưu đãi "Cho bạn – cho tôi"</h4><p>Người mua được chiết khấu 0,5%, khách hàng giới thiệu nhận 0,5%.</p></div>
       <div class="offer reveal"><div class="pct">−1% → −3%</div><h4>Chiết khấu mua nhiều căn</h4><p>2–3 căn: 1% · 4–5 căn: 2% · từ 6 căn: 3%.</p></div>
       <div class="offer reveal"><div class="pct">70%</div><h4>Hỗ trợ vay ngân hàng</h4><p>Vay đến 70% giá trị, hỗ trợ lãi suất 0%, ân hạn nợ gốc 24 tháng.</p></div>
     </div>
@@ -753,10 +804,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <div class="reveal">
         <h3 style="font-size:13px;letter-spacing:.2em;color:var(--gold-3);text-transform:uppercase;margin-bottom:14px">Ba gói dịch vụ</h3>
         <div class="pkgs">
-          <div class="pkg"><h4>Giữ nhà trống</h4><div class="fee">299–499k<small style="font-size:13px">/tháng</small></div><ul><li>Kiểm tra định kỳ 1 lần/tháng</li><li>Báo cáo hiện trạng nhà</li></ul></div>
-          <div class="pkg hot"><h4>Tiêu chuẩn</h4><div class="fee">7%<small style="font-size:13px"> tiền thuê</small></div><ul><li>Tối thiểu 599–799k</li><li>Soạn hợp đồng, thu tiền thuê</li><li>Kiểm tra mỗi quý</li></ul></div>
-          <div class="pkg"><h4>Trọn gói</h4><div class="fee">10%<small style="font-size:13px"> tiền thuê</small></div><ul><li>Tối thiểu 899k–1,099 tr</li><li>Kiểm tra mỗi tháng</li><li>1 giờ công sửa chữa miễn phí</li></ul></div>
+          <div class="pkg"><h4>Giữ nhà trống</h4><ul><li>Kiểm tra định kỳ hằng tháng</li><li>Báo cáo hiện trạng nhà</li><li>Phù hợp nhà chưa cho thuê</li></ul></div>
+          <div class="pkg hot"><h4>Tiêu chuẩn</h4><ul><li>Tìm khách thuê phù hợp</li><li>Soạn hợp đồng, thu tiền thuê</li><li>Kiểm tra nhà mỗi quý</li></ul></div>
+          <div class="pkg"><h4>Trọn gói</h4><ul><li>Vận hành toàn bộ thay chủ nhà</li><li>Kiểm tra nhà mỗi tháng</li><li>Hỗ trợ giờ công sửa chữa</li></ul></div>
         </div>
+        <p class="note" style="margin:10px 0 0">Phí dịch vụ tùy gói và hiện trạng căn nhà – liên hệ để được báo phí chi tiết.</p>
         <div class="trust">
           <div><b>9–15 tr/tháng</b>Mức thuê thực tế tại khu đô thị</div>
           <div><b>40+ căn</b>GĐ1 đang được hỗ trợ tìm khách thuê</div>
@@ -909,6 +961,11 @@ let lbList = [], lbIdx = 0;
 gal.addEventListener('click', e => {
   const a = e.target.closest('a'); if(!a) return; e.preventDefault();
   lbList = [...gal.querySelectorAll('a')].map(x => [x.getAttribute('href'), x.dataset.cap]);
+  lbIdx = lbList.findIndex(x => x[0] === a.getAttribute('href')); showLB();
+});
+document.getElementById('banners').addEventListener('click', e => {
+  const a = e.target.closest('a'); if(!a) return; e.preventDefault();
+  const box = e.currentTarget; lbList = [...box.querySelectorAll('a')].map(x => [x.getAttribute('href'), x.dataset.cap]);
   lbIdx = lbList.findIndex(x => x[0] === a.getAttribute('href')); showLB();
 });
 function openLB(src, cap){ lbList = [[src, cap]]; lbIdx = 0; showLB(); }
