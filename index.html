@@ -269,6 +269,31 @@ footer{background:#0d2111;color:rgba(255,255,255,.6);font-size:13px;padding:30px
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .disclaimer{max-width:760px}
 
+/* ATA HOUSE */
+.ah-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-top:36px}
+@media(max-width:900px){.ah-grid{grid-template-columns:1fr}}
+.pkgs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:620px){.pkgs{grid-template-columns:1fr}}
+.pkg{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.pkg.hot{border-color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold)}
+.pkg h4{color:var(--forest);font-size:15.5px}
+.pkg .fee{font-family:'Playfair Display',serif;font-size:22px;color:var(--leaf);margin:6px 0}
+.pkg ul{list-style:none;font-size:13.5px;color:var(--muted)}
+.pkg li{padding:4px 0}
+.pkg li::before{content:"✓ ";color:var(--leaf);font-weight:700}
+.steps{list-style:none;counter-reset:st}
+.steps li{counter-increment:st;position:relative;padding:0 0 18px 52px}
+.steps li::before{content:counter(st);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;background:var(--forest);color:var(--gold-2);display:grid;place-items:center;font-weight:800}
+.steps b{color:var(--forest);display:block}
+.steps span{font-size:14px;color:var(--muted)}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+@media(max-width:800px){.trust{grid-template-columns:1fr}}
+.trust div{background:#eef4ec;border-radius:14px;padding:16px 18px;font-size:14px;color:var(--forest-3)}
+.trust b{display:block;color:var(--forest);font-size:15px;margin-bottom:4px}
+.f-brand{display:flex;gap:18px;align-items:center}
+.f-brand img{width:92px;background:#fff;border-radius:12px;padding:8px}
+.f-brand a{color:var(--gold-2);text-decoration:none}
+.f-brand a:hover{text-decoration:underline}
 /* REGISTER */
 .reg{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
 @media(max-width:900px){.reg{grid-template-columns:1fr}}
@@ -319,6 +344,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <li><a href="#tien-ich">Tiện ích</a></li>
       <li><a href="#hinh-anh">Hình ảnh</a></li>
       <li><a href="#thanh-toan">Giá & thanh toán</a></li>
+      <li><a href="#cho-thue">Cho thuê</a></li>
       <li><a href="#phap-ly">Pháp lý</a></li>
       <li><a href="#hoi-dap">Hỏi đáp</a></li>
       <li><a href="#dang-ky" style="color:var(--gold-2);font-weight:700">Đăng ký</a></li>
@@ -715,6 +741,42 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   </div>
 </section>
 
+<!-- ATA HOUSE – VẬN HÀNH CHO THUÊ -->
+<section id="cho-thue" style="background:#f3eddd">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Vận hành cho thuê · ATA House</span>
+      <h2 class="title">Căn nhà của bạn, được chăm sóc như người nhà</h2>
+      <p class="lead">Mua nhà ở xa vẫn yên tâm có dòng tiền. <b>ATA House</b> – đơn vị vận hành cho thuê nhà phố Phước Đông New City – thay chủ nhà lo trọn: sửa chữa, tìm khách thuê tin cậy (chuyên gia, kỹ sư KCN), hợp đồng rõ ràng, thu tiền và báo cáo minh bạch – dù bạn ở cách xa hàng trăm cây số.</p>
+    </div>
+    <div class="ah-grid">
+      <div class="reveal">
+        <h3 style="font-size:13px;letter-spacing:.2em;color:var(--gold-3);text-transform:uppercase;margin-bottom:14px">Ba gói dịch vụ</h3>
+        <div class="pkgs">
+          <div class="pkg"><h4>Giữ nhà trống</h4><div class="fee">299–499k<small style="font-size:13px">/tháng</small></div><ul><li>Kiểm tra định kỳ 1 lần/tháng</li><li>Báo cáo hiện trạng nhà</li></ul></div>
+          <div class="pkg hot"><h4>Tiêu chuẩn</h4><div class="fee">7%<small style="font-size:13px"> tiền thuê</small></div><ul><li>Tối thiểu 599–799k</li><li>Soạn hợp đồng, thu tiền thuê</li><li>Kiểm tra mỗi quý</li></ul></div>
+          <div class="pkg"><h4>Trọn gói</h4><div class="fee">10%<small style="font-size:13px"> tiền thuê</small></div><ul><li>Tối thiểu 899k–1,099 tr</li><li>Kiểm tra mỗi tháng</li><li>1 giờ công sửa chữa miễn phí</li></ul></div>
+        </div>
+        <div class="trust">
+          <div><b>9–15 tr/tháng</b>Mức thuê thực tế tại khu đô thị</div>
+          <div><b>40+ căn</b>GĐ1 đang được hỗ trợ tìm khách thuê</div>
+          <div><b>Có mặt tại chỗ</b>Văn phòng B1-12 ngay trong khu đô thị</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <h3 style="font-size:13px;letter-spacing:.2em;color:var(--gold-3);text-transform:uppercase;margin-bottom:14px">Từ tiếp nhận đến an tâm</h3>
+        <ol class="steps">
+          <li><b>Tiếp nhận & khảo sát nhà</b><span>Ghi nhận hiện trạng, chụp ảnh, thống nhất phương án.</span></li>
+          <li><b>Sửa chữa tối ưu</b><span>Báo giá minh bạch, ưu tiên 2 báo giá cho hạng mục trên 3 triệu.</span></li>
+          <li><b>Tìm khách thuê phù hợp</b><span>Sàng lọc kỹ, ưu tiên khách ổn định lâu dài.</span></li>
+          <li><b>Ký hợp đồng & bàn giao</b><span>Điều khoản rõ ràng, biên bản bàn giao đầy đủ.</span></li>
+        </ol>
+        <a class="btn btn-gold" href="https://atahouse.vn/" target="_blank" rel="noopener">Tìm hiểu dịch vụ tại atahouse.vn →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PHÁP LÝ -->
 <section id="phap-ly">
   <div class="wrap">
@@ -807,8 +869,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 </section>
 
 <footer>
-  <div class="wrap">
-    <div><b style="color:#fff">Phước Đông New City</b> · KCN Phước Đông, xã Hưng Thuận, Tây Ninh</div>
+  <div class="wrap" style="align-items:center">
+    <div class="f-brand">
+      <img src="images/logo-ata-group.png" alt="Logo ATA Group" loading="lazy">
+      <div>
+        <div style="color:#fff;font-size:14.5px"><b>ATA Group & ATA House</b> – đơn vị phân phối chính thức và vận hành cho thuê nhà phố Phước Đông New City.</div>
+        <div style="margin-top:6px">Website: <a href="https://atagroupvn.com" target="_blank" rel="noopener">atagroupvn.com</a> · <a href="https://atahouse.vn" target="_blank" rel="noopener">atahouse.vn</a> · Fanpage: <a href="https://www.facebook.com/atagroupvn" target="_blank" rel="noopener">facebook.com/atagroupvn</a></div>
+        <div style="margin-top:4px">Hotline / Zalo: <a href="tel:0988173743">0988 173 743</a> · Dự án: KCN Phước Đông, xã Hưng Thuận, Tây Ninh</div>
+      </div>
+    </div>
     <div class="disclaimer">Thông tin, hình ảnh phối cảnh và số liệu trên trang mang tính tham khảo, có thể thay đổi theo bảng giá và chính sách từng đợt. Cập nhật 09/10/2026.</div>
   </div>
 </footer>
